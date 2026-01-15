@@ -1,10 +1,41 @@
-HELP.md
+# ===============================
+# SENSITIVE FILES - NEVER COMMIT
+# ===============================
+src/main/resources/application.properties
+src/main/resources/application-*.properties
+src/main/java/com/example/backend/config/CloudinaryConfig.java
+.env
+.env.local
+.env.*.local
+
+# ===============================
+# MAVEN BUILD
+# ===============================
 target/
-.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# ===============================
+# MAVEN WRAPPER
+# ===============================
+.mvn/
+mvnw
+mvnw.cmd
+
+# ===============================
+# IDE - IntelliJ IDEA
+# ===============================
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+
+# ===============================
+# IDE - Eclipse
+# ===============================
 .apt_generated
 .classpath
 .factorypath
@@ -13,13 +44,9 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
+# ===============================
+# IDE - NetBeans
+# ===============================
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -29,14 +56,44 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# ===============================
+# IDE - VS Code
+# ===============================
 .vscode/
 
 # ===============================
-# ENV / SECRET CONFIG (BẮT BUỘC)
+# LOGS
 # ===============================
-.env
-.env.*
-application-dev.properties
-application-prod.properties
-application-local.properties
+*.log
+logs/
+spring.log
+
+# ===============================
+# OS FILES
+# ===============================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ===============================
+# TEMPORARY FILES
+# ===============================
+*.tmp
+*.bak
+*.cache
+*.class
+
+# ===============================
+# DATABASE
+# ===============================
+*.db
+*.sqlite
+*.h2.db
+
+# ===============================
+# UPLOADS (if storing locally)
+# ===============================
+uploads/
+temp/
